@@ -9,52 +9,60 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
                         <div>
                             <p className="font-medium tracking-wide text-gray-300">
-                                Category
+                                React Projects
                             </p>
                             <ul className="mt-2 space-y-2">
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://assignment-12-client-ae808.web.app/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        News
+                                        The School of Mindfulness
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://assignment-11-client-4d7d4.web.app/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        World
+                                        Toy Cars Bliss
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://assignment-10-client-2c6e3.web.app/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Games
+                                        Best Chef Recipe
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="/"
+                                        href="https://studycamp-57860.web.app/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        References
+                                        StudyCamp
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://bistro-boss-restaurant-153d6.web.app/"
+                                        className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                                    >
+                                        Bistro Boss Restaurant
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <p className="font-medium tracking-wide text-gray-300">Apples</p>
+                            <p className="font-medium tracking-wide text-gray-300">My Skills</p>
                             <ul className="mt-2 space-y-2">
                                 <li>
                                     <a
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Web
+                                        React Js
                                     </a>
                                 </li>
                                 <li>
@@ -62,7 +70,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        eCommerce
+                                        JavaScripts
                                     </a>
                                 </li>
                                 <li>
@@ -70,7 +78,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Business
+                                        MongoDB
                                     </a>
                                 </li>
                                 <li>
@@ -78,7 +86,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Entertainment
+                                        Tailwind CSS
                                     </a>
                                 </li>
                                 <li>
@@ -86,7 +94,7 @@ const Footer = () => {
                                         href="/"
                                         className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                                     >
-                                        Portfolio
+                                        Bootstrap
                                     </a>
                                 </li>
                             </ul>
@@ -202,7 +210,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
                     <p className="text-sm text-gray-500">
-                        © Copyright 2020 Lorem Inc. All rights reserved.
+                        © Copyright 2023. All rights reserved.| Made by Nizam
                     </p>
                     <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                         <a

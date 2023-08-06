@@ -1,8 +1,11 @@
 import nizam from '../assets/nizam.png'
-
+import { Helmet } from "react-helmet-async";
 const Module67 = () => {
     return (
         <div>
+            <Helmet>
+                <title>Milstone-11 | Module-67</title>
+            </Helmet>
             <div className="hero min-h-screen bg-[#22293D] text-white">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={nizam} className="max-w-sm rounded-lg shadow-2xl" />

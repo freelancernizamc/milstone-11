@@ -1,37 +1,14 @@
-import { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import nizam from '../assets/nizam.png';
 const Module68 = () => {
-    const [users, setUsers] = useState([]);
-    useEffect(() => {
-        fetch('https://car-doctors-server-gray.vercel.app/users')
-            .then(res => res.json())
-            .then(data => setUsers(data));
-    }, [])
 
-    const handleAddUser = event => {
-        event.preventDefault();
-        const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const user = { name, email }
-        console.log(user);
-        fetch('https://car-doctors-server-gray.vercel.app/users', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const newUsers = [...users, data]
-                setUsers(newUsers);
-                form.reset();
-            })
-    }
     return (
         <div>
+            <Helmet>
+                <title>
+                    Milstone-11 | Module-68
+                </title>
+            </Helmet>
             <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
 
                 <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
@@ -79,35 +56,43 @@ const Module68 = () => {
 
             </div>
             <div>
-                <h1 className='text-5xl text-center bg-[#010A1B] text-yellow-600'>Milstone-11 Module-68 Practice</h1><br />
-                <h2 className='text-3xl text-center text-blue-700 font-bold'>Video 66_0 Milestone Overview</h2>
-                <h2 className='text-3xl text-center text-pink-700 font-bold'>Video 66-1 Module Introduction and What is Server</h2>
-                <h2 className='text-3xl text-center text-green-700 font-bold'>Video 66-2 Client and Server Connection with Request and response</h2>
-                <h2 className='text-3xl text-center text-rose-700 font-bold'>Video 66-3 Node vs other languages. How does node js work</h2>
-                <h2 className='text-3xl text-center text-indigo-700 font-bold'>Video 66-4 What is node js and Express js and why use them</h2>
-                <h2 className='text-3xl text-center text-purple-700 font-bold'>Video 66-5 What is Database, DBMS, MongoDB, NoSQL vs SQL</h2>
-                <h2 className='text-3xl text-center text-pink-700 font-bold'>Video 66-6 (Recap) install node-express and use fetch to load data</h2>
-                <h2 className='text-3xl text-center text-green-700 font-bold'>Video 66-7 Create React form and Post API and send data to the server</h2>
-                <h2 className='text-3xl text-center text-indigo-700 font-bold'>Video 66-8 Send Client data to the server and display data on the client</h2>
-                <h2 className='text-3xl text-center text-rose-700 font-bold'>Video 66-9 module summary</h2>
-                <div className='text-center'>
-                    <h1 className='text-3xl'>Users Management System</h1>
-                    <h2 className='text-1xl'>Numbers of Users: {users.length}</h2>
-                    <form onSubmit={handleAddUser}>
-                        <input className='border' type="text" name="name" id="" />
-                        <br />
-                        <input className='border' type="email" name="email" id="" />
-                        <br />
-                        <input className='btn' type="submit" value="Add User" />
-                    </form>
-                    <div>
-                        {
-                            users.map(user => <p key={user.id}>{user.id} : {user.name} : {user.email}</p>)
-                        }
-                    </div>
-                </div>
+                <marquee className='text-5xl text-center bg-[#010A1B] text-[#d420dd] font-extrabold'>Welcome to Milstone-11 Module-68 Practice Section</marquee><br />
+                <h2 className='text-3xl text-center text-blue-700 font-bold'>Video 68-1 Module overview and create basic server and client</h2>
+                <h2 className='text-3xl text-center text-pink-700 font-bold'>Video 68-2 Client Side router and Connect MongoDB database</h2>
+                <h2 className='text-3xl text-center text-green-700 font-bold'>Video 68-3 Server Side hide database User and Password using dotenv config</h2>
+                <h2 className='text-3xl text-center text-rose-700 font-bold'>Video 68-4 Create Add coffee from Client Side and get data</h2>
+                <h2 className='text-3xl text-center text-indigo-700 font-bold'>Video 68-5 Send Coffee data to the server and store in the mongodb database</h2>
+                <h2 className='text-3xl text-center text-purple-700 font-bold'>Video 68-6 View all coffee and create coffee card</h2>
+                <h2 className='text-3xl text-center text-pink-700 font-bold'>Video 68-7 Delete a coffee and fetch coffee for udpate</h2>
+                <h2 className='text-3xl text-center text-green-700 font-bold'>Video 68-8 Update single coffee information</h2>
+                <h2 className='text-3xl text-center text-indigo-700 font-bold'>Video 68-9 Module Summary and Rest API endpoints naming convention</h2>
+                <h1 className='text-5xl text-center bg-[#010A1B] text-[#d420dd] font-extrabold my-10'>Module-68.5</h1>
+                <h2 className='text-3xl text-center text-purple-700 font-bold'>68_5-1 Practice Chocolate CRUD or Users management CRUD</h2>
+                <h2 className='text-3xl text-center text-indigo-900 font-bold'>68_5-2 High level overview of Mongodb Operators</h2>
             </div>
+            <h1 className='text-5xl text-center bg-[#010A1B] text-[#d420dd] font-extrabold my-10'>QUIZ</h1>
+            <h2 className='text-3xl text-center text-green-700 font-bold'>Q1: What is MongoDB Compass?<br />
+                Ans: A GUI tool for managing MongoDB</h2>
+            <h2 className='text-3xl text-center text-pink-700 font-bold'>Q2: What is a middleware in Express.js?<br />
+                Ans: A way to handle HTTP requests and response</h2>
+            <h2 className='text-3xl text-center text-blue-700 font-bold'>Q3: Which of the following is a way to define a middleware in Express.js?<br />
+                Ans: Using the app.use() method</h2>
+            <h2 className='text-3xl text-center text-indigo-950 font-bold'>Q4: What are the possible values for the acknowledged property in the JSON response after an insert operation in MongoDB?<br />
+                Ans: true or false</h2>
+            <h2 className='text-3xl text-center text-rose-700 font-bold'>Q5: What is an HTTP status code?<br />
+                Ans: A code that indicates the success or failure of a request made to a server using the HTTP protocol</h2>
+            <h2 className='text-3xl text-center text-green-700 font-bold'>Q6: What is the HTTP status code for a successful GET request in a RESTful API?<br />
+                Ans: 200</h2>
+            <h2 className='text-3xl text-center text-pink-700 font-bold'>Q7: What is the purpose of a RESTful APIs response headers?<br />
+                Ans: To provide additional information about the response data</h2>
+            <h2 className='text-3xl text-center text-blue-800 font-bold'>Q8: Which MongoDB operator is commonly used to update a single document in a RESTful API?<br />
+                Ans: $set</h2>
+            <h2 className='text-3xl text-center text-rose-800 font-bold'>Q9: What is a common data format used in REST APIs?<br />
+                Ans: JSON</h2>
+            <h2 className='text-3xl text-center text-rose-800 font-bold mb-5'>Q10: Which of the following is the syntax for the find() method in MongoDB?<br />
+                Ans: db.collection.find(query,projection, option)</h2>
         </div>
+
     );
 };
 

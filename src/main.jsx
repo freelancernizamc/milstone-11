@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css'
 import {
   createBrowserRouter,
@@ -64,10 +64,12 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+  <HelmetProvider>
+    <React.StrictMode>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
 
-  </React.StrictMode>
+    </React.StrictMode>
+  </HelmetProvider>
 );
